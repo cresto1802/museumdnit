@@ -1,0 +1,38 @@
+.card .container{
+    padding: 0px 0px;
+}
+
+.card .container form>button {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    background-color: #555;
+    color: white;
+    font-size: 12px;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.card .container img{
+    width: 557px;
+    height: 400px;
+}
+
+.card {
+    max-height: 750px;
+}
+
+.row {
+    padding-top: 30px;
+}
+
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}

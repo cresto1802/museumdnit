@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    "{% static 'Новости.css' %}"
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="u-clearfix u-white u-section-1" id="sec-6a19">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h2 class="u-align-center u-custom-font u-font-open-sans u-text u-text-default u-text-1">Новости</h2>
+            <div class="u-align-center u-border-3 u-border-palette-5-dark-1 u-line u-line-horizontal u-line-1"></div>
+            <div class="u-align-center u-list u-list-1">
+                <div class="u-repeater u-repeater-1">
+                    {% for item in categories %}
+                        <div class="u-container-style u-list-item u-repeater-item">
+                            <div class="u-container-layout u-similar-container u-container-layout-1">
+                                <a href="{{ item.get_absolute_url }}"
+                                   class="u-active-none u-align-center u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-1 u-btn u-button-style u-custom-item u-hover-none u-none u-text-hover-palette-5-dark-3 u-text-palette-5-dark-2 u-btn-1">{{ item.title }}</a>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <a href="{% url 'news' %}"
+                           class="u-active-none u-align-center u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-1 u-btn u-button-style u-custom-item u-hover-none u-none u-text-hover-palette-5-dark-3 u-text-palette-5-dark-2 u-btn-1">Все
+                            события</a>
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    {% for item in news %}
+                    <div class="col">
+                        <div class="card border-secondary">
+                            <div class="container">
+                                <img alt="" class="card-img-top" src="{{ item.photo.url }}">
+                                <form action="{{ item.category.get_absolute_url }}">
+                                    <button class="btn">{{ item.category }}</button>
+                                </form>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.title }}</h5>
+                                <p class="card-text">{{ item.anonse }}</p>
+                                <a href="{{ item.get_absolute_url }}" class="btn btn-secondary">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            {% comment %}
+            <div class="u-align-center u-list u-list-2">
+
+                <div class="u-repeater u-repeater-2">
+                    {% for item in news %}
+                        <div class="u-border-1 u-border-grey-75 u-container-style u-list-item u-repeater-item u-video-cover u-white">
+                            <div class="u-container-layout u-similar-container u-container-layout-6">
+                                <h3 class="u-text u-text-default u-text-2">{{ item.title }}</h3>
+                                <div class="u-border-4 u-border-palette-5-dark-2 u-expanded-width u-line u-line-horizontal u-line-2"></div>
+                                <div class="container">
+                                    <img alt="" class="img"
+                                         src="{{ item.photo.url }}">
+                                    <form action="{{ item.category.get_absolute_url }}">
+                                        <button class="btn">{{ item.category }}</button>
+                                    </form>
+                                </div>
+                                <p class="u-text u-text-default u-text-3">{{ item.content|truncatechars:300}}</p>
+                                <a href="{{ item.get_absolute_url }}" data-page-id="858309645"
+                                   class="u-border-none u-btn u-button-style u-palette-5-dark-2 u-btn-7">Подробнее</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endcomment %}
+            <div class="paginator_color">
+                <nav aria-label="...">
+                    <ul class="pagination justify-content-center pagination ">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Назад</a>
+                            </li>
+                        {% endif %}
+                        {% for p in page_obj.paginator.page_range %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+                            </li>
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}">Вперед</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+    </section>
+{% endblock %}
+
+

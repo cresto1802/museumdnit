@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="">
+        {% csrf_token %}
+        {% comment %}
+        {{ form.as_p }}
+        {% endcomment %}
+        <h2 align="center"> Обратная связь</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-5 ">
+                    <label for="{{ form.name.id_for_label }}" class="form-label">{{ form.name.label }}</label>
+                    {{ form.name }}
+                    <div class="invalid-feedback">
+                        {{ form.name.errors }}
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <label for="{{ form.email.id_for_label }}" class="form-label">{{ form.email.label }}</label>
+                    {{ form.email }}
+                    <div class="invalid-feedback">
+                        {{ form.email.errors }}
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <label for="{{ form.phonenumber.id_for_label }}" class="form-label">{{ form.phonenumber.label }}</label>
+                    {{ form.phonenumber }}
+                    <div class="invalid-feedback">
+                        {{ form.phonenumber.errors }}
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <label for="{{ form.excursion.id_for_label }}" class="form-label">{{ form.excursion.label }}</label>
+                    {{ form.excursion }}
+                    <div class="invalid-feedback">
+                        {{ form.excursion.errors }}
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <label for="{{ form.message.id_for_label }}" class="form-label">{{ form.message.label }}</label>
+                    {{ form.message }}
+                    <div class="invalid-feedback">
+                        {{ form.message.errors }}
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-5 justify-content-end">
+                <div class="col-5 p-3">
+                    <button type="submit" class="btn btn-secondary btn-block ">Записаться</button>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

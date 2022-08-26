@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+"{% static 'Новости.css' %}"
+{% endblock %}
+
+
+{% block content %}
+<section class="u-clearfix u-white u-section-1" id="sec-6a19">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-custom-font u-font-open-sans u-text u-text-default u-text-1">Новости</h2>
+        <div class="u-align-center u-border-3 u-border-palette-5-dark-1 u-line u-line-horizontal u-line-1"></div>
+        <div class="u-align-center u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                {% for item in categories %}
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <a href="{{ item.get_absolute_url }}"
+                           class="u-active-none u-align-center u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-1 u-btn u-button-style u-custom-item u-hover-none u-none u-text-hover-palette-5-dark-3 u-text-palette-5-dark-2 u-btn-1">{{ item.title }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="u-list u-list-2">
+            <div class="u-repeater u-repeater-2">
+                <div class="u-border-2 u-border-palette-5-dark-2 u-container-style u-list-item u-repeater-item u-video-cover u-white">
+                    <div class="u-container-layout u-similar-container u-container-layout-5">
+                        <a href="https://nicepage.com/c/technology-website-templates"
+                           class="u-active-none u-border-2 u-border-palette-5-dark-3 u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-5">Новости<br>
+                        </a>
+                        <h3 class="u-text u-text-default u-text-2">Новость 1</h3>
+                        <div class="u-border-4 u-border-palette-5-dark-2 u-expanded-width u-line u-line-horizontal u-line-2"></div>
+                        <img alt=""
+                             class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1"
+                             data-image-width="2000" data-image-height="1333" src="{% static 'images/10.svg' %}">
+                        <p class="u-text u-text-default u-text-3">Sample text. Click to select the text box. Click again
+                            or double click to start editing the text.</p>
+                        <a href="{% url 'news_single' %}" data-page-id="858309645"
+                           class="u-border-none u-btn u-button-style u-palette-5-dark-2 u-btn-6">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

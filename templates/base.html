@@ -1,0 +1,327 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Новости​, Экспозиции, Проекты">
+    <meta name="description" content="">
+    <title>{% block title %} {% endblock %} Главная</title>
+    {% block css %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/yandex.css' %}" media="screen">
+    <link rel="stylesheet" href={% block head %}{% endblock %} media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.14.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    {% block style %} {% endblock %}
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"sameAs": [
+				"https://vk.com/area.museum.domnit ",
+				"https://www.youtube.com/channel/UCnoOEjG1WHmkzYcMHACvFaQ",
+				"https://t.me/museum_DNiT"
+		]
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Главная">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body u-xl-mode" data-lang="ru">
+<header class="u-align-left u-clearfix u-header u-section-row-container" id="sec-2be5">
+    <div class="u-section-rows">
+        <div class="u-section-row u-white u-section-row-1" id="sec-46aa">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-social-icons u-spacing-10 u-social-icons-1">
+                    <a class="u-social-url" target="_blank" data-type="Email" title="Email" href="mailto:visitvmusei@yandex.ru"><span
+                            class="u-icon u-social-email u-social-icon u-text-palette-5-dark-2 u-icon-1"><svg
+                            class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-64ec"></use></svg><svg
+                            class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-64ec"><circle
+                            fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path id="path3864" fill="#FFFFFF"
+                                                                                          d="M27.2,28h57.6c4,0,7.2,3.2,7.2,7.2l0,0v42.7c0,3.9-3.2,7.2-7.2,7.2l0,0H27.2
+	c-4,0-7.2-3.2-7.2-7.2V35.2C20,31.1,23.2,28,27.2,28 M56,52.9l28.8-17.8H27.2L56,52.9 M27.2,77.7h57.6V43.5L56,61.3L27.2,43.5V77.7z
+	"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" data-type="VK" title="VK"
+                       href="https://vk.com/area.museum.domnit "><span
+                            class="u-icon u-social-icon u-social-vk u-text-palette-5-dark-2 u-icon-2"><svg
+                            class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1067"></use></svg><svg
+                            class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-1067"><circle
+                            fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M88.2,80.7l-9.8,0.1c0,0-2.1,0.4-4.9-1.5c-3.7-2.5-7.2-9.1-9.9-8.2C60.9,72,61,77.9,61,77.9s0,1.3-0.6,1.9
+            c-0.7,0.7-2,0.9-2,0.9H54c0,0-9.7,0.6-18.3-8.3c-9.3-9.7-17.6-29-17.6-29s-0.5-1.3,0-1.9c0.6-0.7,2.2-0.7,2.2-0.7l10.5-0.1
+            c0,0,1,0.2,1.7,0.7c0.6,0.4,0.9,1.2,0.9,1.2s1.7,4.3,4,8.2c4.4,7.6,6.4,9.3,7.9,8.4c2.2-1.2,1.5-10.7,1.5-10.7s0-3.5-1.1-5
+            c-0.9-1.2-2.5-1.5-3.3-1.6c-0.6-0.1,0.4-1.5,1.6-2.1c1.9-0.9,5.2-1,9.2-0.9c3.1,0,4,0.2,5.2,0.5c3.6,0.9,2.4,4.3,2.4,12.4
+            c0,2.6-0.5,6.3,1.4,7.5c0.8,0.5,2.8,0.1,7.7-8.3c2.3-4,4.1-8.6,4.1-8.6s0.4-0.8,1-1.2s1.4-0.3,1.4-0.3l11.1-0.1c0,0,3.3-0.4,3.9,1.1
+            c0.6,1.6-1.2,5.3-5.8,11.3c-7.4,9.9-8.3,9-2.1,14.7c5.9,5.5,7.1,8.1,7.3,8.5C93.4,80.4,88.2,80.7,88.2,80.7z"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" data-type="YouTube" title="YouTube"
+                       href="https://www.youtube.com/channel/UCnoOEjG1WHmkzYcMHACvFaQ"><span
+                            class="u-icon u-social-icon u-social-youtube u-text-palette-5-dark-2 u-icon-3"><svg
+                            class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-75b0"></use></svg><svg
+                            class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-75b0"><circle
+                            fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF"
+                                                                                          d="M74.9,33.3H37.3c-7.4,0-13.4,6-13.4,13.4v18.8c0,7.4,6,13.4,13.4,13.4h37.6c7.4,0,13.4-6,13.4-13.4V46.7 C88.3,39.3,82.3,33.3,74.9,33.3L74.9,33.3z M65.9,57l-17.6,8.4c-0.5,0.2-1-0.1-1-0.6V47.5c0-0.5,0.6-0.9,1-0.6l17.6,8.9 C66.4,56,66.4,56.8,65.9,57L65.9,57z"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" data-type="Telegram" title="Telegram"
+                       href="https://t.me/museum_DNiT"><span
+                            class="u-icon u-social-icon u-social-telegram u-text-palette-5-dark-2 u-icon-4"><svg
+                            class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-627e"></use></svg><svg
+                            class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-627e"><circle
+                            fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M18.4,53.2l64.7-24.9c3-1.1,5.6,0.7,4.7,5.3l0,0l-11,51.8c-0.8,3.7-3,4.6-6.1,2.8L53.9,75.8l-8.1,7.8
+	c-0.9,0.9-1.7,1.6-3.4,1.6l1.2-17l31.1-28c1.4-1.2-0.3-1.9-2.1-0.7L34.2,63.7l-16.6-5.2C14,57.4,14,54.9,18.4,53.2L18.4,53.2z"></path></svg></span>
+                    </a>
+                </div>
+                <img class="u-align-center u-image u-image-default u-image-1" src="{% static 'images/11.png' %}" alt=""
+                     data-image-width="473" data-image-height="322">
+                <a href="#" class="u-image u-logo u-image-2" data-image-width="1521" data-image-height="527">
+                    <img src="{% static 'images/_-04.png' %}" class="u-logo-image u-logo-image-1">
+                </a>
+                <a href="#" class="u-image u-logo u-image-3" data-image-width="1200" data-image-height="270">
+                    <img src="{% static 'images/pgrants_logo_gp_horizontal.png' %}" class="u-logo-image u-logo-image-2">
+                </a>
+            </div>
+
+
+        </div>
+        <div class="u-section-row u-section-row-2" id="sec-37e8">
+            <div class="u-clearfix u-sheet u-valign-top u-sheet-2">
+                <nav data-position="" class="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1">
+                    <div class="menu-collapse"
+                         style="font-size: 1rem; letter-spacing: 0px; text-transform: uppercase; font-weight: 500;">
+                        <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-color u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link"
+                           href="#" style="padding: 2px 0px; font-size: calc(1em + 4px);">
+                            <svg class="u-svg-link" viewBox="0 0 24 24">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+                            </svg>
+                            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px"
+                                 y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <rect y="1" width="16" height="2"></rect>
+                                    <rect y="7" width="16" height="2"></rect>
+                                    <rect y="13" width="16" height="2"></rect>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="u-custom-menu u-nav-container">
+                        <ul class="u-nav u-spacing-2 u-unstyled u-nav-1">
+                            <li class="u-nav-item"><a
+                                    class="u-active-palette-5-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-5-dark-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                                    href="{% url 'home' %}" style="padding: 18px 40px;">Главная</a>
+                            </li>
+                            <li class="u-nav-item"><a
+                                    class="u-active-palette-5-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-5-dark-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                                    href="{% url 'news' %}" style="padding: 18px 40px;">Новости</a>
+                            </li>
+                            <li class="u-nav-item"><a
+                                    class="u-active-palette-5-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-5-dark-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                                    href="{% url 'exposure' %}" style="padding: 18px 40px;">Экспозиции</a>
+                            </li>
+                            <li class="u-nav-item"><a
+                                    class="u-active-palette-5-dark-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-5-dark-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                                    style="padding: 18px 40px;">Проекты</a>
+                                <div class="u-nav-popup">
+                                    <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-white"
+                                                                  href="{% url 'home' %}#sec-ac67" data-page-id="4756675">Мини-музей
+                                            Изобретений</a>
+                                        </li>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-white"
+                                                                  href="{% url 'home' %}#sec-ac67" data-page-id="4756675">Музей
+                                            нашего детства</a>
+                                        </li>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-white"
+                                                                  href="{% url 'home' %}#sec-ac67" data-page-id="4756675">
+                                            Монументальное искусство Красноярска</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="u-custom-menu u-nav-container-collapse">
+                        <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                            <div class="u-inner-container-layout u-sidenav-overflow">
+                                <div class="u-menu-close"></div>
+                                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3">
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}">Главная</a>
+                                    </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'news' %}">Новости</a>
+                                    </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'exposure' %}">Экспозиции</a>
+                                    </li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link">Проекты</a>
+                                        <div class="u-nav-popup">
+                                            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+                                                <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                          href="{% url 'home' %}#sec-ac67"
+                                                                          data-page-id="4756675">Мини-музей
+                                                    Изобретений</a>
+                                                </li>
+                                                <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                          href="{% url 'home' %}#sec-ac67"
+                                                                          data-page-id="4756675">Музей нашего
+                                                    детства</a>
+                                                </li>
+                                                <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                                                                          href="{% url 'home' %}#sec-ac67"
+                                                                          data-page-id="4756675"> Монументальное
+                                                    искусство Красноярска</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+                    </div>
+                </nav>
+                <a href="{% url 'entry_excursion' %}"
+                   class="u-border-none u-btn u-button-style u-hover-palette-5-dark-2 u-palette-5-dark-1 u-btn-1">Запись
+                    на Экскурсии</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+<footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-white" id="sec-a705">
+
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=53020228&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/53020228/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="53020228" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(53020228, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53020228" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+        <h3 class="u-align-center u-headline u-text u-text-1">
+            <a href="/">Контакты</a>
+        </h3>
+        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-text u-text-2">ОУ "ККДНИТ", 660049,
+            Красноярский край, г.Красноярск, ул.Урицкого, д.61,<br>visitvmusei@yandex.ru
+        </p>
+
+        <img class="u-align-center u-image u-image-default u-image-1" src="{% static 'images/512512.32.png' %}" alt=""
+             data-image-width="503" data-image-height="110" data-href="http://domnit.ru/ru/">
+
+        <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
+            <a class="u-social-url" target="_blank" data-type="Email" title="Email"
+               href="mailto:visitvmusei@yandex.ru "><span
+                    class="u-icon u-social-email u-social-icon u-text-palette-5-dark-1 u-icon-1"><svg class="u-svg-link"
+                                                                                                      preserveAspectRatio="xMidYMin slice"
+                                                                                                      viewBox="0 0 112 112"
+                                                                                                      style=""><use
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-86fd"></use></svg><svg
+                    class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-86fd"><circle fill="currentColor"
+                                                                                                  cx="56.1" cy="56.1"
+                                                                                                  r="55"></circle><path
+                    id="path3864" fill="#FFFFFF" d="M27.2,28h57.6c4,0,7.2,3.2,7.2,7.2l0,0v42.7c0,3.9-3.2,7.2-7.2,7.2l0,0H27.2
+	c-4,0-7.2-3.2-7.2-7.2V35.2C20,31.1,23.2,28,27.2,28 M56,52.9l28.8-17.8H27.2L56,52.9 M27.2,77.7h57.6V43.5L56,61.3L27.2,43.5V77.7z
+	"></path></svg></span>
+            </a>
+            <a class="u-social-url" target="_blank" data-type="VK" title="VK"
+               href="https://vk.com/area.museum.domnit"><span
+                    class="u-icon u-social-icon u-social-vk u-text-palette-5-dark-1 u-icon-2"><svg class="u-svg-link"
+                                                                                                   preserveAspectRatio="xMidYMin slice"
+                                                                                                   viewBox="0 0 112 112"
+                                                                                                   style=""><use
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2b7e"></use></svg><svg
+                    class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-2b7e"><circle fill="currentColor"
+                                                                                                  class="st0" cx="56.1"
+                                                                                                  cy="56.1"
+                                                                                                  r="55"></circle><path
+                    fill="#FFFFFF" d="M88.2,80.7l-9.8,0.1c0,0-2.1,0.4-4.9-1.5c-3.7-2.5-7.2-9.1-9.9-8.2C60.9,72,61,77.9,61,77.9s0,1.3-0.6,1.9
+            c-0.7,0.7-2,0.9-2,0.9H54c0,0-9.7,0.6-18.3-8.3c-9.3-9.7-17.6-29-17.6-29s-0.5-1.3,0-1.9c0.6-0.7,2.2-0.7,2.2-0.7l10.5-0.1
+            c0,0,1,0.2,1.7,0.7c0.6,0.4,0.9,1.2,0.9,1.2s1.7,4.3,4,8.2c4.4,7.6,6.4,9.3,7.9,8.4c2.2-1.2,1.5-10.7,1.5-10.7s0-3.5-1.1-5
+            c-0.9-1.2-2.5-1.5-3.3-1.6c-0.6-0.1,0.4-1.5,1.6-2.1c1.9-0.9,5.2-1,9.2-0.9c3.1,0,4,0.2,5.2,0.5c3.6,0.9,2.4,4.3,2.4,12.4
+            c0,2.6-0.5,6.3,1.4,7.5c0.8,0.5,2.8,0.1,7.7-8.3c2.3-4,4.1-8.6,4.1-8.6s0.4-0.8,1-1.2s1.4-0.3,1.4-0.3l11.1-0.1c0,0,3.3-0.4,3.9,1.1
+            c0.6,1.6-1.2,5.3-5.8,11.3c-7.4,9.9-8.3,9-2.1,14.7c5.9,5.5,7.1,8.1,7.3,8.5C93.4,80.4,88.2,80.7,88.2,80.7z"></path></svg></span>
+            </a>
+            <a class="u-social-url" target="_blank" data-type="YouTube" title="YouTube"
+               href="https://www.youtube.com/channel/UCnoOEjG1WHmkzYcMHACvFaQ"><span
+                    class="u-icon u-social-icon u-social-youtube u-text-palette-5-dark-1 u-icon-3"><svg
+                    class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cd0a"></use></svg><svg
+                    class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-cd0a"><circle fill="currentColor"
+                                                                                                  cx="56.1" cy="56.1"
+                                                                                                  r="55"></circle><path
+                    fill="#FFFFFF"
+                    d="M74.9,33.3H37.3c-7.4,0-13.4,6-13.4,13.4v18.8c0,7.4,6,13.4,13.4,13.4h37.6c7.4,0,13.4-6,13.4-13.4V46.7 C88.3,39.3,82.3,33.3,74.9,33.3L74.9,33.3z M65.9,57l-17.6,8.4c-0.5,0.2-1-0.1-1-0.6V47.5c0-0.5,0.6-0.9,1-0.6l17.6,8.9 C66.4,56,66.4,56.8,65.9,57L65.9,57z"></path></svg></span>
+            </a>
+            <a class="u-social-url" target="_blank" data-type="Telegram" title="Telegram"
+               href="https://t.me/museum_DNiT"><span
+                    class="u-icon u-social-icon u-social-telegram u-text-palette-5-dark-1 u-icon-4"><svg
+                    class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-dea2"></use></svg><svg
+                    class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-dea2"><circle fill="currentColor"
+                                                                                                  cx="56.1" cy="56.1"
+                                                                                                  r="55"></circle><path
+                    fill="#FFFFFF" d="M18.4,53.2l64.7-24.9c3-1.1,5.6,0.7,4.7,5.3l0,0l-11,51.8c-0.8,3.7-3,4.6-6.1,2.8L53.9,75.8l-8.1,7.8
+	c-0.9,0.9-1.7,1.6-3.4,1.6l1.2-17l31.1-28c1.4-1.2-0.3-1.9-2.1-0.7L34.2,63.7l-16.6-5.2C14,57.4,14,54.9,18.4,53.2L18.4,53.2z"></path></svg></span>
+            </a>
+        </div>
+        <p class="u-align-center u-text u-text-3"> ОУ&nbsp;«Красноярский&nbsp;краевой&nbsp;Дом&nbsp;науки&nbsp;и&nbsp;техники&nbsp;Российского&nbsp;Союза&nbsp;научных&nbsp;и&nbsp;инженерных <br>общественных&nbsp;<br>объединений"
+            (ОУ «ККДНиТ»)
+        </p>
+        <a href="{% url 'contact_us' %}"
+           class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-5-dark-2 u-palette-5-dark-1 u-radius-50 u-btn-1"><span
+                class="u-icon"><svg class="u-svg-content" viewBox="0 0 55.25 55.25" x="0px" y="0px"
+                                    style="width: 1em; height: 1em;"><path d="M52.618,2.631c-3.51-3.508-9.219-3.508-12.729,0L3.827,38.693C3.81,38.71,3.8,38.731,3.785,38.749
+	c-0.021,0.024-0.039,0.05-0.058,0.076c-0.053,0.074-0.094,0.153-0.125,0.239c-0.009,0.026-0.022,0.049-0.029,0.075
+	c-0.003,0.01-0.009,0.02-0.012,0.03l-3.535,14.85c-0.016,0.067-0.02,0.135-0.022,0.202C0.004,54.234,0,54.246,0,54.259
+	c0.001,0.114,0.026,0.225,0.065,0.332c0.009,0.025,0.019,0.047,0.03,0.071c0.049,0.107,0.11,0.21,0.196,0.296
+	c0.095,0.095,0.207,0.168,0.328,0.218c0.121,0.05,0.25,0.075,0.379,0.075c0.077,0,0.155-0.009,0.231-0.027l14.85-3.535
+	c0.027-0.006,0.051-0.021,0.077-0.03c0.034-0.011,0.066-0.024,0.099-0.039c0.072-0.033,0.139-0.074,0.201-0.123
+	c0.024-0.019,0.049-0.033,0.072-0.054c0.008-0.008,0.018-0.012,0.026-0.02l36.063-36.063C56.127,11.85,56.127,6.14,52.618,2.631z
+	 M51.204,4.045c2.488,2.489,2.7,6.397,0.65,9.137l-9.787-9.787C44.808,1.345,48.716,1.557,51.204,4.045z M46.254,18.895l-9.9-9.9
+	l1.414-1.414l9.9,9.9L46.254,18.895z M4.961,50.288c-0.391-0.391-1.023-0.391-1.414,0L2.79,51.045l2.554-10.728l4.422-0.491
+	l-0.569,5.122c-0.004,0.038,0.01,0.073,0.01,0.11c0,0.038-0.014,0.072-0.01,0.11c0.004,0.033,0.021,0.06,0.028,0.092
+	c0.012,0.058,0.029,0.111,0.05,0.165c0.026,0.065,0.057,0.124,0.095,0.181c0.031,0.046,0.062,0.087,0.1,0.127
+	c0.048,0.051,0.1,0.094,0.157,0.134c0.045,0.031,0.088,0.06,0.138,0.084C9.831,45.982,9.9,46,9.972,46.017
+	c0.038,0.009,0.069,0.03,0.108,0.035c0.036,0.004,0.072,0.006,0.109,0.006c0,0,0.001,0,0.001,0c0,0,0.001,0,0.001,0h0.001
+	c0,0,0.001,0,0.001,0c0.036,0,0.073-0.002,0.109-0.006l5.122-0.569l-0.491,4.422L4.204,52.459l0.757-0.757
+	C5.351,51.312,5.351,50.679,4.961,50.288z M17.511,44.809L39.889,22.43c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0
+	L16.097,43.395l-4.773,0.53l0.53-4.773l22.38-22.378c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0L10.44,37.738
+	l-3.183,0.354L34.94,10.409l9.9,9.9L17.157,47.992L17.511,44.809z M49.082,16.067l-9.9-9.9l1.415-1.415l9.9,9.9L49.082,16.067z"></path></svg><img></span>&nbsp;Написать
+            нам</a>
+    </div>
+
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+</html>
